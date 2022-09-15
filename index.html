@@ -18,6 +18,24 @@
         <img src="https://hitwebcounter.com/counter/counter.php?page=8038754&style=0015&nbdigits=7&type=page&initCount=0"
             title="Free Counter" Alt="web counter" border="0" />
     </a>
+    <div id="yourinfo"></div>
+    <script type="text/javascript" src="http://www.google.com/jsapi?key=<YOUR_GOOGLE_API_KEY>"></script>
+    <script type="text/javascript">
+        if(google.loader.ClientLocation)
+        {
+            visitor_lat = google.loader.ClientLocation.latitude;
+            visitor_lon = google.loader.ClientLocation.longitude;
+            visitor_city = google.loader.ClientLocation.address.city;
+            visitor_region = google.loader.ClientLocation.address.region;
+            visitor_country = google.loader.ClientLocation.address.country;
+            visitor_countrycode = google.loader.ClientLocation.address.country_code;
+            document.getElementById('yourinfo').innerHTML = '<p>Lat/Lon: ' + visitor_lat + ' / ' + visitor_lon + '</p><p>Location: ' + visitor_city + ', ' + visitor_region + ', ' + visitor_country + ' (' + visitor_countrycode + ')</p>';
+        }
+        else
+        {
+            document.getElementById('yourinfo').innerHTML = '<p>Whoops!</p>';
+        }
+    </script>
     <hr>
     <section>
         <h2>Career</h2>
