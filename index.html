@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="module">
+   
 <head>
     <title>Our Funky HTML Page</title>
     <link rel="stylesheet" href="./styles.css">
@@ -16,27 +17,28 @@
     <p>
         Holger Meyer was born in Saarland around the year 1967. He has achieved multiple awards over the span of this life. Some of the most interesting phases are displayed on this resume in the following. 
     </p>
-    <b><p>View Counter</p></b> <a href="https://www.hitwebcounter.com" target="_blank">
-        <img src="https://hitwebcounter.com/counter/counter.php?page=8038754&style=0015&nbdigits=7&type=page&initCount=0"
+     <a href="https://www.hitwebcounter.com" target="_blank">
+         <img src="https://hitwebcounter.com/counter/counter.php?page=8038754&style=0015&nbdigits=7&type=page&initCount=0"
             title="Free Counter" Alt="web counter" border="0" />
     </a>
-    <div>Country: <span id="country"></span></div>
-        <div>State: <span id="state"></span></div>
-         <div>City: <span id="city"></span></div>
-         <div>Latitude: <span id="latitude"></span></div>
-         <div>Longitude: <span id="longitude"></span></div>
-         <div>IP: <span id="ip"></span></div>
-         <script>
-             $.getJSON('https://geolocation-db.com/json/')
-                 .done(function (location) {
-                     $('#country').html(location.country_name);
-                     $('#state').html(location.state);
-                     $('#city').html(location.city);
-                     $('#latitude').html(location.latitude);
-                     $('#longitude').html(location.longitude);
-                     $('#ip').html(location.IPv4);
-                 });
-         </script>
+     <div>Country: <span id="country"></span></div>
+     <div>State: <span id="state"></span></div>
+     <div>City: <span id="city"></span></div>
+     <div>Latitude: <span id="latitude"></span></div>
+     <div>Longitude: <span id="longitude"></span></div>
+     <div>IP: <span id="ip"></span></div>
+     <script>
+         $.getJSON('https://geolocation-db.com/json/')
+             .done(function (location) {
+                 $('#country').html(location.country_name);
+                 $('#state').html(location.state);
+                 $('#city').html(location.city);
+                 $('#latitude').html(location.latitude);
+                 $('#longitude').html(location.longitude);
+                 $('#ip').html(location.IPv4);
+             });
+     </script>
+    
     <hr>
     <section>
         <h2>Career</h2>
